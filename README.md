@@ -20,3 +20,4 @@ A example of using JetBrains IntelliJ to build a simple text editor from Swing c
 
 * [Video 2 - Text Editor from pure code](https://www.youtube.com/watch?v=GNhXvXXogeY)
 * [Code for Video 2](https://docs.google.com/document/d/e/2PACX-1vTfOjBp7UUXIWb74ILu8vUGG6jZLfgZwGzLWLDBmY8yyhzA3K2F4sb6f813dbisWl2-ZrwHaSgbsuQN/pub)
+* [IntelliJ GUI Designer - Tutorial](https://www.jetbrains.com/help/idea/design-gui-using-swing.html)
