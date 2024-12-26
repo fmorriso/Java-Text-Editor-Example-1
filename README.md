@@ -4,11 +4,11 @@ A example of using JetBrains IntelliJ to build a simple text editor from Swing c
 
 ## Tools Used
 
-| Tool     | Version  |
-|----------|----------|
+| Tool     |  Version |
+|----------|---------:|
 | Java     | 23.0.1.0 |
 | IntelliJ | 2024.3.1 |
-| VSCode   | 1.96.2   |
+| VSCode   |   1.96.2 |
 
 ## Change History
 
