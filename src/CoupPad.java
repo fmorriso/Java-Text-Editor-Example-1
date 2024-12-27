@@ -6,10 +6,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 //
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 //
@@ -32,6 +29,13 @@ public class CoupPad extends JFrame implements ActionListener {
         super();
         String title = String.format("CoupPad - The Super Fantastic Text Editor using Java %s", getJavaVersion());
         setTitle(title);
+
+        Dimension scaledSize = SwingScreenUtilities.getScaledSize(0.4, 100);
+        this.setSize(scaledSize);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
         innerWindow.setLayout(new GridLayout(2, 2, 1, 1));
 
         innerWindow.add(readFileButton);
@@ -55,9 +59,6 @@ public class CoupPad extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         CoupPad window = new CoupPad();
-        window.setSize(800, 400);
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        window.setLocationRelativeTo(null);
         window.setVisible(true);
 
     }//end main
