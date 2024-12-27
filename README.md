@@ -12,9 +12,10 @@ A example of using JetBrains IntelliJ to build a simple text editor from Swing c
 
 ## Change History
 
-| Date       | Description      |
-|------------|------------------|
-| 2024-12-25 | Initial creation |
+| Date       | Description                  |
+|------------|------------------------------|
+| 2024-12-25 | Initial creation             |
+| 2024-12-27 | refactor some variable names |
 
 ## References
 
