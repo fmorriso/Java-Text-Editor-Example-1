@@ -29,7 +29,9 @@ public class CoupPad extends JFrame implements ActionListener {
     private JPanel innerWindow = new JPanel();
 
     public CoupPad() {
-        super("CoupPad - The Super Fantastic Text Editor");
+        super();
+        String title = String.format("CoupPad - The Super Fantastic Text Editor using Java %s", getJavaVersion());
+        setTitle(title);
         innerWindow.setLayout(new GridLayout(2, 2, 1, 1));
 
         innerWindow.add(readFileButton);
