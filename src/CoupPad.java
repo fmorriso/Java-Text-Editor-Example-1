@@ -33,6 +33,19 @@ public class CoupPad extends JFrame implements ActionListener {
         Dimension scaledSize = SwingScreenUtilities.getScaledSize(0.4, 100);
         this.setSize(scaledSize);
 
+        int fontSize = textDisplayArea.getFont().getSize() *
+                SwingScreenUtilities.getDefaultScreenSize().height
+                / scaledSize.height;
+        Font scaledFontPlain = new Font("monospaced", Font.PLAIN, fontSize);
+        System.out.format("Scaled font size: %d%n", fontSize);
+        Font scaledFontBold = scaledFontPlain.deriveFont(Font.BOLD, fontSize);
+
+        this.setFont(scaledFontPlain);
+        this.readFileButton.setFont(scaledFontBold);
+        this.writeFileButton.setFont(scaledFontBold);
+        this.nameField.setFont(scaledFontPlain);
+        this.filenameLabel.setFont(scaledFontBold);
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -43,7 +56,7 @@ public class CoupPad extends JFrame implements ActionListener {
         innerWindow.add(nameField);
         innerWindow.add(filenameLabel);
 
-        this.getContentPane().setLayout(new BorderLayout());
+        this.getContentPane().setLayout(new BorderLayout(32,32));
 
         this.getContentPane().add("North", innerWindow);
         this.getContentPane().add(new JScrollPane(textDisplayArea));
@@ -52,7 +65,8 @@ public class CoupPad extends JFrame implements ActionListener {
         innerWindow.setBackground(Color.red);
         textDisplayArea.setBackground(Color.green);
 
-        textDisplayArea.setFont(new Font("Serif", Font.ITALIC, 20));
+
+        textDisplayArea.setFont(scaledFontPlain.deriveFont(Font.ITALIC, fontSize));
         readFileButton.addActionListener(this);
         writeFileButton.addActionListener(this);
     }

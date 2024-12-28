@@ -72,7 +72,7 @@ public class SwingScreenUtilities {
      *
      * @return Dimension containing the default screen width and height.
      */
-    private static Dimension getDefaultScreenSize() {
+    public static Dimension getDefaultScreenSize() {
         GraphicsEnvironment genv = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice device = genv.getDefaultScreenDevice();
         DisplayMode mode = device.getDisplayMode();
